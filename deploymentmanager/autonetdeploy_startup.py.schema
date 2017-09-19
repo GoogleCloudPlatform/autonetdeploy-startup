@@ -1,0 +1,20 @@
+info:
+  title: Automated Network Deployment - Startup
+  author: truty@google.com
+  description: Simple vm in the default network with http(s) tags.
+
+required:
+  - project_id
+  - zone
+  - instance_type
+
+properties:
+  project_id:
+    description: GCP Project ID in which to create resource.
+    type: string
+  zone:
+    description: GCP Zone in which to create the resources.
+    type: string
+  instance_type:
+    description: GCP Hardware Machine Type (#vcpus, memory).
+    type: string
