@@ -38,11 +38,6 @@ def GenerateConfig(context):
                             'projects', context.properties['project_id'],
                             'zones', context.properties['zone'],
                             'diskTypes/pd-standard']),
-          'licenses': [
-              '/'.join([COMPUTE_URL_BASE,
-                        'projects', context.properties['project_id'],
-                        'global', 'licenses/debian-8-jessie']),
-          ],
           'sourceImage': '/'.join([COMPUTE_URL_BASE,
                                    'projects', 'debian-cloud', 'global',
                                    'images/family/debian-8']),
