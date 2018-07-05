@@ -94,6 +94,8 @@ function createCredentials () {
   local THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local TFVARS_DIR_PATH="${THIS_DIR}/terraform"
   local TFVARS_FILE_PATH="${TFVARS_DIR_PATH}/terraform.tfvars"
+  local NEXT18_DIR_PATH="${THIS_DIR}/next18"
+  local NEXT18_FILE_PATH="${NEXT18_DIR_PATH}/terraform.tfvars"
   local TFVAR_CREDS='gcp_credentials_file_path'
 
   if [ "$1" != "exists" ]; then
@@ -103,6 +105,8 @@ function createCredentials () {
 
   createTFVars "${TFVARS_FILE_PATH}"
   addTFVar "${TFVARS_FILE_PATH}" "${TFVAR_CREDS}" "${CREDS_FILE_PATH}"
+  createTFVars "${NEXT18_FILE_PATH}"
+  addTFVar "${NEXT18_FILE_PATH}" "${TFVAR_CREDS}" "${CREDS_FILE_PATH}"
 }
 
 

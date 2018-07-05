@@ -76,6 +76,8 @@ function addProject() {
   local DM_PROJECT_FILE_PATH="${THIS_DIR}/deploymentmanager/${DM_PROJECT_FILE}"
   local TFVARS_DIR_PATH="${THIS_DIR}/terraform"
   local TFVARS_FILE_PATH="${TFVARS_DIR_PATH}/terraform.tfvars"
+  local NEXT18_DIR_PATH="${THIS_DIR}/next18"
+  local NEXT18_FILE_PATH="${NEXT18_DIR_PATH}/terraform.tfvars"
   local TFVAR_PROJECT='gcp_project_id'
 
   checkArgs ${PROJECT_ID}
@@ -88,6 +90,11 @@ function addProject() {
   mkdir -p "${TFVARS_DIR_PATH}"
   createTFVars "${TFVARS_FILE_PATH}"
   addTFVar "${TFVARS_FILE_PATH}" "${TFVAR_PROJECT}" "${PROJECT_ID}"
+
+  # Same treatment for next18 Terraform files.
+  mkdir -p "${NEXT18_DIR_PATH}"
+  createTFVars "${NEXT18_FILE_PATH}"
+  addTFVar "${NEXT18_FILE_PATH}" "${TFVAR_PROJECT}" "${PROJECT_ID}"
 }
 
 addProject $(gcloud config get-value project 2> /dev/null)
