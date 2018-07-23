@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 /*
  * Terraform compute resources for GCP.
  */

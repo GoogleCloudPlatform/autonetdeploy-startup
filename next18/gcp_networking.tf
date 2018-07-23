@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-
 /*
  * Terraform networking resources for GCP.
  */
 
 resource "google_compute_network" "gcp-network" {
-  name = "gcp-network"
+  name                    = "gcp-network"
   auto_create_subnetworks = "false"
 }
 

@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 /*
  * Terraform main configuration file (with provider definitions).
  */

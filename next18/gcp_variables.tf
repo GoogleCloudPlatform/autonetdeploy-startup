@@ -14,42 +14,40 @@
  * limitations under the License.
  */
 
-
 /*
  * Terraform variable declarations for GCP.
  */
 
 variable gcp_credentials_file_path {
   description = "Locate the GCP credentials .json file."
-  type = "string"
+  type        = "string"
 }
 
 variable "gcp_project_id" {
   description = "GCP Project ID."
-  type = "string"
+  type        = "string"
 }
 
 variable gcp_region {
   description = "Default to Council Bluffs region."
-  default = "us-central1"
+  default     = "us-central1"
 }
 
 variable gcp_zone {
   description = "Default to Council Bluffs zone b for no real reason."
-  default = "us-central1-b"
+  default     = "us-central1-b"
 }
 
 variable gcp_instance_type {
   description = "Machine Type. Correlates to an network egress cap."
-  default = "n1-standard-1"
+  default     = "n1-standard-1"
 }
 
 variable gcp_disk_image {
   description = "Boot disk for gcp_instance_type."
-  default = "projects/debian-cloud/global/images/family/debian-8"
+  default     = "projects/debian-cloud/global/images/family/debian-8"
 }
 
 variable gcp_subnet1_cidr {
   default = "10.240.0.0/24"
 }
-
