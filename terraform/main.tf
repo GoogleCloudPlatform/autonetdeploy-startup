@@ -20,7 +20,7 @@
  */
 
 provider "google" {
-  version = "~> 1.16.0"
+  version = "~> 2.11.0"
 
   credentials = "${file("${var.gcp_credentials_file_path}")}"
 
