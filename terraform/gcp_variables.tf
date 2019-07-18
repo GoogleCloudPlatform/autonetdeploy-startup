@@ -41,5 +41,5 @@ variable gcp_instance_type {
 
 variable gcp_disk_image {
   description = "Boot disk for gcp_instance_type."
-  default = "projects/debian-cloud/global/images/family/debian-8"
+  default = "projects/debian-cloud/global/images/family/debian-9"
 }
