@@ -26,12 +26,12 @@ data "google_compute_zones" "available" {
 
 resource "google_compute_instance" "gcp-vm" {
   name         = "gcp-vm-${var.gcp_region}"
-  machine_type = "${var.gcp_instance_type}"
-  zone         = "${data.google_compute_zones.available.names[0]}"
+  machine_type = var.gcp_instance_type
+  zone         = data.google_compute_zones.available.names[0]
 
   boot_disk {
     initialize_params {
-      image = "${var.gcp_disk_image}"
+      image = var.gcp_disk_image
     }
   }
 
