@@ -21,12 +21,12 @@
 
 variable gcp_credentials_file_path {
   description = "Locate the GCP credentials .json file."
-  type = "string"
+  type = string
 }
 
 variable "gcp_project_id" {
   description = "GCP Project ID."
-  type = "string"
+  type = string
 }
 
 variable gcp_region {
